@@ -15,9 +15,8 @@ public class MySqlConfig {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             conectar = DriverManager.getConnection(url, usuario, password);
-            System.out.println("Conexión Exitosa");
             return conectar;
-        } catch (SQLException | ClassNotFoundException ex) {
+        } catch (SQLException ex) {
             System.out.println("Error al iniciar la Conexión: " + ex.getMessage());
             throw ex;
         }
