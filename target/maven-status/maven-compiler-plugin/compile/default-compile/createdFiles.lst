@@ -1,0 +1,5 @@
+org\arranz\ProviderRepository.class
+org\arranz\MySqlConfig.class
+org\arranz\Writer.class
+org\arranz\Application.class
+org\arranz\Provider.class

@@ -1,0 +1,7 @@
+id_proveedor, nombre, fecha_de_alta, id_cliente
+7, 2022-11-12, Honda, 2
+8, 2022-11-12, Lenovo, 2
+9, 2022-11-12, Apple, 2
+10, 2022-11-12, Jbl, 2
+11, 2022-11-12, Sennheiser, 2
+12, 2022-11-12, Xiaomi, 2
