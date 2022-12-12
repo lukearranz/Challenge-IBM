@@ -15,7 +15,6 @@ public class ProviderRepository {
     private final static String ID_CLIENTE = "id_cliente";
     private final static String DATABASE_NAME = "proveedores";
 
-    // Aqui creamos una instancia de la config para conectarnos a la DDBB.
     private final MySqlConfig mySqlConfig = new MySqlConfig();
 
     public List<Provider> getProvidersByClientId(int clientId) throws SQLException, ClassNotFoundException {
@@ -29,7 +28,7 @@ public class ProviderRepository {
             Statement stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery(statement);
             while (rs.next()) {
-                // create a builder
+                // Create a builder
                 Provider provider = new Provider();
                 provider.setProviderId(rs.getInt(ID_PROVEEDOR));
                 provider.setClientId(rs.getInt(ID_CLIENTE));

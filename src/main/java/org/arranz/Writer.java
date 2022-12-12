@@ -6,7 +6,6 @@ import java.util.List;
 
 public class Writer {
 
-    // Clase inmutable
     private final BufferedWriter bufferedWriter;
 
     public Writer(BufferedWriter bufferedWriter) throws IOException {
