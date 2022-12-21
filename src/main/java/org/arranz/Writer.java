@@ -8,7 +8,7 @@ public class Writer {
 
     private final BufferedWriter bufferedWriter;
 
-    public Writer(BufferedWriter bufferedWriter) throws IOException {
+    public Writer(BufferedWriter bufferedWriter) {
         this.bufferedWriter = bufferedWriter;
     }
 

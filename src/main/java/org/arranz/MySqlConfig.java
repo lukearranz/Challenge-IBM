@@ -6,16 +6,13 @@ import java.sql.SQLException;
 
 public class MySqlConfig {
 
-    private final String url = "jdbc:mysql://localhost:3306/challenge_ibm";
-    private final String usuario = "root";
-    private final String password = "";
-    private Connection conectar;
-
     public Connection connectToDatabase() throws SQLException, ClassNotFoundException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conectar = DriverManager.getConnection(url, usuario, password);
-            return conectar;
+            String url = "jdbc:mysql://localhost:3306/challenge_ibm";
+            String usuario = "root";
+            String password = "";
+            return DriverManager.getConnection(url, usuario, password);
         } catch (SQLException ex) {
             System.out.println("Error al iniciar la Conexión: " + ex.getMessage());
             throw ex;

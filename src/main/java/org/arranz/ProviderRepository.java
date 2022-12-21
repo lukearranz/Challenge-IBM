@@ -9,16 +9,16 @@ import java.util.List;
 
 public class ProviderRepository {
 
-    private final static String ID_PROVEEDOR = "proveedor_id";
-    private final static String NAME = "nombre";
-    private final static String FECHA_DE_ALTA = "fecha_de_alta";
-    private final static String ID_CLIENTE = "id_cliente";
-    private final static String DATABASE_NAME = "proveedores";
+    private static final String ID_PROVEEDOR = "proveedor_id";
+    private static final String NAME = "nombre";
+    private static final String FECHA_DE_ALTA = "fecha_de_alta";
+    private static final String ID_CLIENTE = "id_cliente";
+    private static final String DATABASE_NAME = "proveedores";
 
     private final MySqlConfig mySqlConfig = new MySqlConfig();
 
     public List<Provider> getProvidersByClientId(int clientId) throws SQLException, ClassNotFoundException {
-        // check string format last value change to int
+
         String statement = String.format("select %s , %s , %s , %s from %s where id_cliente= %s",
                 ID_PROVEEDOR, NAME, FECHA_DE_ALTA, ID_CLIENTE, DATABASE_NAME, clientId);
         List<Provider> providers = new ArrayList<>();
